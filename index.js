@@ -3,6 +3,7 @@ const app = express()
 const port = 3000
 const { loginDiscordClient, sendBuildInfo } = require('./discordClient')
 
+// Stores new builds in a hash to keep track of discord message and build info
 let in_progress_builds = {}
 
 app.use(express.json());
